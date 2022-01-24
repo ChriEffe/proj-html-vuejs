@@ -79,6 +79,7 @@ header {
     color: $white;
     font-size: 0.8em;
     margin-top: 1.5em;
+    width: 16em;
   }
 }
 </style>

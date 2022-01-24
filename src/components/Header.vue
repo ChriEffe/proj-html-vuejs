@@ -1,7 +1,8 @@
 <template>
   <header class="p-relative">
-    <button class="btn">+</button>
+    <button class="add btn rounded-circle">+</button>
     <div class="container">
+      <!-- navbar -->
       <div class="row">
         <div class="col-4">
           <img class="logo" src="../assets/img/takeout-logo.png" alt="logo" />
@@ -23,6 +24,17 @@
           </ul>
         </div>
       </div>
+      <div class="content">
+        <h4>Hungry?</h4>
+        <h1>
+          <span>Great Food</span>
+          <br />
+          Delivered
+        </h1>
+        <button class="btn-menu btn rounded-pill fw-bold">
+          view our menu <i class="fas fa-arrow-circle-right"></i>
+        </button>
+      </div>
     </div>
   </header>
 </template>
@@ -40,7 +52,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  button {
+  .add {
     position: absolute;
     top: 10px;
     right: 15px;
@@ -49,6 +61,23 @@ header {
   }
   .container .row {
     padding: 4em 0;
+  }
+}
+.content {
+  color: $white;
+  padding-top: 5em;
+  h1 {
+    font-weight: 900;
+    span {
+      color: $yellow;
+    }
+  }
+  .btn-menu {
+    background-color: $button;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 0.8em;
+    margin-top: 1.5em;
   }
 }
 </style>

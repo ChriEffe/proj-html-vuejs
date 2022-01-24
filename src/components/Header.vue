@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="content">
-        <h4>Hungry?</h4>
+        <h4 class="fs-1">Hungry?</h4>
         <h1>
           <span>Great Food</span>
           <br />
@@ -68,6 +68,7 @@ header {
   padding-top: 5em;
   h1 {
     font-weight: 900;
+    font-size: 4em;
     span {
       color: $yellow;
     }

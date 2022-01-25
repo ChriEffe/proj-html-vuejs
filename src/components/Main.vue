@@ -45,18 +45,22 @@
         </div>
       </div>
     </div>
+    <!-- latest news -->
+    <LatestNews />
   </main>
 </template>
 
 <script>
 import Categories from "./Categories.vue";
 import Popular from "./Popular.vue";
+import LatestNews from "./LatestNews.vue";
 
 export default {
   name: "Main",
   components: {
     Categories,
     Popular,
+    LatestNews,
   },
 };
 </script>

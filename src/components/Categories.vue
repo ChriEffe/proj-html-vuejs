@@ -59,17 +59,33 @@
           >specials</span
         >
       </li>
-      <li class="d-flex justify-content-center align-items-center">
+      <li
+        class="d-flex flex-column justify-content-center align-items-center fw-bold"
+      >
         <img src="../assets/img/vegetarian-icon.png" alt="" />
+        Vegetarian
       </li>
-      <li class="d-flex justify-content-center align-items-center">
-        <img class="w-50" src="../assets/img/gluten-free-icon.png" alt="" />
+      <li
+        class="d-flex flex-column justify-content-center align-items-center fw-bold"
+      >
+        <img
+          class="w-50 mb-0"
+          src="../assets/img/gluten-free-icon.png"
+          alt=""
+        />
+        Gluten Free
       </li>
-      <li class="d-flex justify-content-center align-items-center">
+      <li
+        class="d-flex flex-column justify-content-center align-items-center fw-bold"
+      >
         <img src="../assets/img/dairy-free-icon.png" alt="" />
+        Dairy Free
       </li>
-      <li class="d-flex justify-content-center align-items-center">
+      <li
+        class="d-flex flex-column justify-content-center align-items-center fw-bold fw-bold"
+      >
         <img src="../assets/img/keto-friendly-icon.png" alt="" />
+        Keto Friendly
       </li>
     </ul>
   </div>
@@ -106,6 +122,7 @@ li {
   }
   img {
     width: 40%;
+    margin-bottom: 1.5em;
   }
 }
 .appetizers {

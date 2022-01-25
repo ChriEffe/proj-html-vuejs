@@ -59,6 +59,18 @@
           >specials</span
         >
       </li>
+      <li class="d-flex justify-content-center align-items-center">
+        <img src="../assets/img/vegetarian-icon.png" alt="" />
+      </li>
+      <li class="d-flex justify-content-center align-items-center">
+        <img class="w-50" src="../assets/img/gluten-free-icon.png" alt="" />
+      </li>
+      <li class="d-flex justify-content-center align-items-center">
+        <img src="../assets/img/dairy-free-icon.png" alt="" />
+      </li>
+      <li class="d-flex justify-content-center align-items-center">
+        <img src="../assets/img/keto-friendly-icon.png" alt="" />
+      </li>
     </ul>
   </div>
 </template>
@@ -83,6 +95,7 @@ li {
   height: 240px;
   width: calc((100% / 4) - 1rem);
   background-size: contain;
+  background-repeat: no-repeat;
   span {
     display: block;
     height: 100%;
@@ -90,6 +103,9 @@ li {
     background-color: rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
     color: $white;
+  }
+  img {
+    width: 40%;
   }
 }
 .appetizers {

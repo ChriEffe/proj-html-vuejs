@@ -20,7 +20,7 @@
     <!-- popular dishes -->
     <div class="popular container text-center">
       <h2 class="fw-bold">Our Most Popular Dishes</h2>
-      <div class="row">
+      <div class="row mb-4">
         <div class="col-4">
           <img src="../assets/img/skin-on-fries-400x571.jpg" alt="" />
           <h3>Skin On Fries</h3>
@@ -43,11 +43,20 @@
     </div>
     <!-- offer -->
     <div class="offer"></div>
+    <!-- categories -->
+    <Categories />
   </main>
 </template>
 
 <script>
-export default {};
+import Categories from "./Categories.vue";
+
+export default {
+  name: "Main",
+  components: {
+    Categories,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -77,7 +86,6 @@ p {
   text-transform: uppercase;
   color: $white;
   font-size: 0.8em;
-  margin-top: 1.5em;
   width: 16em;
 }
 .offer {
@@ -85,5 +93,6 @@ p {
   background-image: url(../assets/img/first-order-background-scaled.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 5em;
 }
 </style>

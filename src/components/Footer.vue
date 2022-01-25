@@ -79,6 +79,57 @@
           </ul>
         </div>
       </div>
+      <!-- input -->
+      <div class="row justify-content-center">
+        <div class="col-6 d-flex flex-column align-items-center">
+          <img
+            class="w-50"
+            src="../assets/img/takeout-logo-2x-400x85.png"
+            alt=""
+          />
+          <h1 class="fw-bold">Stay In The Loop</h1>
+          <p>
+            Sign up to receive up to date news and offers directly in your
+            inbox:
+          </p>
+          <input
+            class="form-control rounded-pill"
+            type="email"
+            placeholder="you@email.com"
+          />
+          <button class="btn rounded-pill mt-4 fw-bold">subscribe</button>
+        </div>
+      </div>
+      <!-- social -->
+      <ul class="mt-5 d-flex justify-content-center gap-3">
+        <li>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-wifi"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="far fa-envelope"></i></a>
+        </li>
+      </ul>
+      <p class="copyright text-center">
+        <span>© Copyright 2012-2020|Avada Theme by</span> ThemeFusion<span
+          >|All Right Reserved|Powered by</span
+        >
+        WordPress
+      </p>
     </div>
   </footer>
 </template>
@@ -115,8 +166,26 @@ li {
   img {
     width: 100%;
   }
-  span {
-    color: $yellow;
-  }
+}
+span {
+  color: $yellow;
+}
+h1 {
+  color: $yellow;
+  font-size: 3.5em;
+}
+p {
+  color: $white;
+  font-size: 1.1em;
+}
+button {
+  background-color: $button;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 0.8em;
+  width: 100%;
+}
+.copyright {
+  font-size: 0.8em;
 }
 </style>

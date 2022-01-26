@@ -49,7 +49,55 @@
           </button>
         </div>
       </div>
-      <Categories />
+      <ul class="d-flex flex-wrap gap-3">
+        <Categories
+          v-for="(menu, index) in categories"
+          :key="index"
+          :img="getImg(menu.img)"
+          :alt="menu.title"
+          :title="menu.title"
+        />
+        <li
+          class="allergens-icon d-flex flex-column justify-content-center align-items-center fw-bold"
+        >
+          <img
+            class="allergens"
+            src="../assets/img/vegetarian-icon.png"
+            alt=""
+          />
+          Vegetarian
+        </li>
+        <li
+          class="allergens-icon d-flex flex-column justify-content-center align-items-center fw-bold"
+        >
+          <img
+            class="w-50 mb-0"
+            src="../assets/img/gluten-free-icon.png"
+            alt=""
+          />
+          Gluten Free
+        </li>
+        <li
+          class="allergens-icon d-flex flex-column justify-content-center align-items-center fw-bold"
+        >
+          <img
+            class="allergens"
+            src="../assets/img/dairy-free-icon.png"
+            alt=""
+          />
+          Dairy Free
+        </li>
+        <li
+          class="allergens-icon d-flex flex-column justify-content-center align-items-center fw-bold fw-bold"
+        >
+          <img
+            class="allergens"
+            src="../assets/img/keto-friendly-icon.png"
+            alt=""
+          />
+          Keto Friendly
+        </li>
+      </ul>
     </div>
     <!-- banner app -->
     <div class="banner app">
@@ -109,6 +157,40 @@ export default {
           price: "$6.99",
         },
       ],
+      categories: [
+        {
+          img: "img/appetizers-menu-background.jpg",
+          title: "appetizers",
+        },
+        {
+          img: "img/burgers-menu-background.jpg",
+          title: "burgers",
+        },
+        {
+          img: "img/pizza-menu-background.jpg",
+          title: "pizza",
+        },
+        {
+          img: "img/fries-menu-background.jpg",
+          title: "fries",
+        },
+        {
+          img: "img/sides-menu-background.jpg",
+          title: "sides",
+        },
+        {
+          img: "img/desserts-menu-background.jpg",
+          title: "desserts",
+        },
+        {
+          img: "img/beverages-menu-background.jpg",
+          title: "beverages",
+        },
+        {
+          img: "img/specials-menu-background.jpg",
+          title: "specials",
+        },
+      ],
     };
   },
   methods: {
@@ -164,6 +246,14 @@ h2 {
   color: $white;
   font-size: 0.8em;
   width: 16em;
+}
+.allergens-icon {
+  height: 240px;
+  width: calc((100% / 4) - 1rem);
+  .allergens {
+    width: 40%;
+    margin-bottom: 1.5em;
+  }
 }
 .content {
   color: $white;

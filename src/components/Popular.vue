@@ -1,6 +1,16 @@
 <template>
   <div class="col-4">
-    <img :src="img" :alt="name" />
+    <div class="p-relative">
+      <img :src="img" :alt="name" />
+      <div class="display-n">
+        <span
+          class="add-cart d-flex flex-column justify-content-center align-items-center"
+          ><button class="btn rounded-circle">
+            <i class="fs-2 far fa-check-square"></i></button
+          >view cart</span
+        >
+      </div>
+    </div>
     <h3>{{ name }}</h3>
     <p>{{ price }}</p>
   </div>
@@ -31,5 +41,34 @@ export default {
 
 p {
   color: $button;
+}
+.p-relative {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  .display-n {
+    display: none;
+    .add-cart {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      text-transform: uppercase;
+      color: $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+  }
+  .display-n:hover {
+    display: block;
+  }
+}
+button {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1em 1.2em;
+  color: white;
 }
 </style>

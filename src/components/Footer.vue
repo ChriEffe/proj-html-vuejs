@@ -163,6 +163,9 @@ li {
     margin-bottom: 1.4em;
     font-size: 1.2em;
   }
+  a:hover {
+    color: $yellow;
+  }
   img {
     width: 100%;
   }

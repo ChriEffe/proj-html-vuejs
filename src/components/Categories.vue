@@ -1,12 +1,11 @@
 <template>
-  <ul class="d-flex flex-wrap gap-3">
-    <li class="appetizers">
-      <span
-        class="opacity d-flex justify-content-center align-items-center fw-bold"
-        >appetizers</span
-      >
-    </li>
-    <li class="burgers">
+  <li class="appetizers">
+    <img :src="img" :alt="title" />
+    <span class="d-flex justify-content-center align-items-center fw-bold">{{
+      title
+    }}</span>
+  </li>
+  <!-- <li class="burgers">
       <span
         class="opacity d-flex justify-content-center align-items-center fw-bold"
         >burgers</span
@@ -47,37 +46,13 @@
         class="opacity d-flex justify-content-center align-items-center fw-bold"
         >specials</span
       >
-    </li>
-    <li
-      class="d-flex flex-column justify-content-center align-items-center fw-bold"
-    >
-      <img src="../assets/img/vegetarian-icon.png" alt="" />
-      Vegetarian
-    </li>
-    <li
-      class="d-flex flex-column justify-content-center align-items-center fw-bold"
-    >
-      <img class="w-50 mb-0" src="../assets/img/gluten-free-icon.png" alt="" />
-      Gluten Free
-    </li>
-    <li
-      class="d-flex flex-column justify-content-center align-items-center fw-bold"
-    >
-      <img src="../assets/img/dairy-free-icon.png" alt="" />
-      Dairy Free
-    </li>
-    <li
-      class="d-flex flex-column justify-content-center align-items-center fw-bold fw-bold"
-    >
-      <img src="../assets/img/keto-friendly-icon.png" alt="" />
-      Keto Friendly
-    </li>
-  </ul>
+    </li> -->
 </template>
 
 <script>
 export default {
   name: "Categories",
+  props: ["img", "title"],
 };
 </script>
 
@@ -87,43 +62,44 @@ export default {
 li {
   height: 240px;
   width: calc((100% / 4) - 1rem);
-  background-size: contain;
-  background-repeat: no-repeat;
+  position: relative;
+  img {
+    width: 100%;
+  }
   span {
-    display: block;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
     color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  img {
-    width: 40%;
-    margin-bottom: 1.5em;
-  }
 }
-.appetizers {
-  background-image: url(../assets/img/appetizers-menu-background.jpg);
-}
-.burgers {
-  background-image: url(../assets/img/burgers-menu-background.jpg);
-}
-.pizza {
-  background-image: url(../assets/img/pizza-menu-background.jpg);
-}
-.fries {
-  background-image: url(../assets/img/fries-menu-background.jpg);
-}
-.desserts {
-  background-image: url(../assets/img/sides-menu-background.jpg);
-}
-.sides {
-  background-image: url(../assets/img/desserts-menu-background.jpg);
-}
-.beverages {
-  background-image: url(../assets/img/beverages-menu-background.jpg);
-}
-.specials {
-  background-image: url(../assets/img/specials-menu-background.jpg);
-}
+// .appetizers {
+//   background-image: url(../assets/img/appetizers-menu-background.jpg);
+// }
+// .burgers {
+//   background-image: url(../assets/img/burgers-menu-background.jpg);
+// }
+// .pizza {
+//   background-image: url(../assets/img/pizza-menu-background.jpg);
+// }
+// .fries {
+//   background-image: url(../assets/img/fries-menu-background.jpg);
+// }
+// .desserts {
+//   background-image: url(../assets/img/sides-menu-background.jpg);
+// }
+// .sides {
+//   background-image: url(../assets/img/desserts-menu-background.jpg);
+// }
+// .beverages {
+//   background-image: url(../assets/img/beverages-menu-background.jpg);
+// }
+// .specials {
+//   background-image: url(../assets/img/specials-menu-background.jpg);
+// }
 </style>

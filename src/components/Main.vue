@@ -18,11 +18,39 @@
       </div>
     </div>
     <!-- popular dishes -->
-    <Popular />
+    <div class="popular container text-center">
+      <h2 class="fw-bold">Our Most Popular Dishes</h2>
+      <div class="row mb-4">
+        <Popular
+          v-for="(product, index) in products"
+          :key="index"
+          :img="product.img"
+          :name="product.name"
+          :price="product.price"
+        />
+      </div>
+      <button class="btn-menu-p btn rounded-pill fw-bold">
+        start your order <i class="fas fa-arrow-circle-right"></i>
+      </button>
+    </div>
     <!-- banner offer -->
-    <div class="banner offer"></div>
+    <div class="banner offer">
+      <img class="wave" src="../assets/img/wave.svg" alt="" />
+    </div>
     <!-- categories -->
-    <Categories />
+    <div class="categories container">
+      <div class="row mb-4">
+        <div class="col-6">
+          <h2 class="fw-bold">Menu Categories</h2>
+        </div>
+        <div class="col-6 text-end">
+          <button class="cat- btn rounded-pill fw-bold">
+            view the full menu <i class="fas fa-arrow-circle-right"></i>
+          </button>
+        </div>
+      </div>
+      <Categories />
+    </div>
     <!-- banner app -->
     <div class="banner app">
       <div class="container">
@@ -62,6 +90,27 @@ export default {
     Popular,
     LatestNews,
   },
+  data() {
+    return {
+      products: [
+        {
+          img: "../assets/img/skin-on-fries-400x571.jpg",
+          name: "Skin On Fries",
+          price: "$3.00-$6.00",
+        },
+        {
+          img: "../assets/img/choco-cookie-frappe-400x571.jpg",
+          name: "Choko Cookie Frappe",
+          price: "$4.99",
+        },
+        {
+          img: "../assets/img/donut-burger-400x571.jpg",
+          name: "The Donut Burger",
+          price: "$6.99",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -82,6 +131,16 @@ h2 {
     padding-right: 1em;
   }
 }
+.popular {
+  padding: 5em 0;
+}
+.btn-menu-p {
+  background-color: $button;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 0.8em;
+  width: 16em;
+}
 .banner {
   height: 430px;
   background-repeat: no-repeat;
@@ -93,6 +152,13 @@ h2 {
 }
 .app {
   background-image: url(../assets/img/app-ordering-scaled.jpg);
+}
+.cat- {
+  background-color: $button;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 0.8em;
+  width: 16em;
 }
 .content {
   color: $white;

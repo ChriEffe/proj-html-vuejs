@@ -12,7 +12,10 @@
     </div>
     <div class="row">
       <div class="col-6">
-        <img src="../assets/img/pancake-burger-600x450.jpg" alt="" />
+        <img
+          src="../assets/img/pancake-burger-600x450.jpg"
+          alt="pancake burger"
+        />
         <h3 class="text-center fw-bold">NEW: The Pancake Burger</h3>
         <p class="text-center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aliquid

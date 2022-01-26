@@ -24,7 +24,7 @@
         <Popular
           v-for="(product, index) in products"
           :key="index"
-          :img="product.img"
+          :img="getImg(product.img)"
           :name="product.name"
           :price="product.price"
         />
@@ -94,22 +94,27 @@ export default {
     return {
       products: [
         {
-          img: "../assets/img/skin-on-fries-400x571.jpg",
+          img: "img/skin-on-fries-400x571.jpg",
           name: "Skin On Fries",
           price: "$3.00-$6.00",
         },
         {
-          img: "../assets/img/choco-cookie-frappe-400x571.jpg",
+          img: "img/choco-cookie-frappe-400x571.jpg",
           name: "Choko Cookie Frappe",
           price: "$4.99",
         },
         {
-          img: "../assets/img/donut-burger-400x571.jpg",
+          img: "img/donut-burger-400x571.jpg",
           name: "The Donut Burger",
           price: "$6.99",
         },
       ],
     };
+  },
+  methods: {
+    getImg(pic) {
+      return require("../assets/" + pic);
+    },
   },
 };
 </script>
